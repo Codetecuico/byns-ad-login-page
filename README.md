@@ -1,1 +1,1 @@
-# byns-ad-login-page
+# Byns AD Custom Login Page
