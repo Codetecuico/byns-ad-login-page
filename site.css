@@ -1,80 +1,162 @@
-﻿.navbar-brand > img {
-  width: 45px;
-  height: 45px;
-  border-radius: 2px;
-  opacity: 0.7;
-}
-.navbar-brand {
-  font-family: ubuntu;
-  font-size: 30px;
-  font-weight: bolder;
-}
-html,
-body,
-#container {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+﻿html {
   height: 100%;
-  font-size: 12pt;
-}
-body > #container {
-  height: auto;
-  min-height: 100%;
-}
-
-.default-footer {
-  font-size: 9pt;
-  color: gray;
-  text-align: center;
-  height: 100px;
-}
-
-.ct-divider {
-  border-top: solid 1px #eaeaea;
-  height: 0;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-@font-face {
-  font-family: 'Ubuntu-Bold';
-  src: url(../fonts/Ubuntu-Bold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Ubuntu-Regular';
-  src: url(../fonts/Ubuntu-Regular.ttf) format('truetype');
-}
-
-html {
-  background: none;
 }
 
 body {
-  background-attachment: fixed;
-  background-image: url("../images/background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: left;
+  align-items: center;
+  background-color: #f5f5f5;
+  display: flex;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  height: 100%;
+  justify-content: center;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
-@media(max-width:480px) {
-  body {
-    background-image: none;
-    background-color: #f2f2f2;
-  }
-
-  .divider h2 {    
-    margin: 10px 0 !important;
-  }
-
-  .login-logo {
-    height: 80px !important;
-    margin-top: -65px !important;
-  }
+a {
+  color: #6cbf84;
 }
 
-::-moz-placeholder {
+a:hover {
+  color: #6cbf84;
+  text-decoration: none;
+}
+
+main {
+  margin: auto;
+  max-width: 420px;
+  padding: 15px;
+  width: 100%;
+}
+
+/* TYPOGRAPHY */
+
+h2,
+h3,
+.intro > p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 1.5rem!important;
+  text-align: center!important;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+/* BUTTONS */
+
+button {
+  background-color: #fff;
+  border: 0;
+  border-radius: .25rem;
+  -webkit-border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  color: #323339;
+  cursor: pointer;
+  display: block;
+  font-size: .81rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: .84rem 2.14rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: normal;
+  width: 100%!important;
+  word-wrap: break-word;
+}
+
+button:active,
+button:focus,
+button:hover {
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  outline: 0;
+}
+
+button:disabled {
+  opacity: .65;
+}
+
+button:focus,
+button:hover {
+  text-decoration: none;
+}
+
+/* CARDS */
+
+.card {
+  background-clip: border-box;
+  background-color: #fff;
+  border: 0;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  display: flex;
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  display: -webkit-box;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  font-weight: 400;
+  min-width: 0;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -webkit-box-flex: 1;
+  padding: 1.25rem;
+}
+
+.card-header {
+  background-color: #323339;
+  border-radius: 10rem!important;
+  -webkit-border-radius: 10rem!important;
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);  
+  color: #fff;
+  margin-bottom: 1.5rem;
+  margin-top: -3.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-header h3 {
+  color: #fff!important;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0!important;
+  padding: 0;
+}
+
+/* FORMS */
+
+:-moz-placeholder  {
+  color: transparent;
+}
+
+:-ms-input-placeholder  {
   color: transparent;
 }
 
@@ -82,7 +164,7 @@ body {
   color: transparent;
 }
 
-:-ms-input-placeholder {
+::-ms-input-placeholder  {
   color: transparent;
 }
 
@@ -90,22 +172,171 @@ body {
   color: transparent;
 }
 
-label,
-.password-label {
-  margin-top: 10px;
+.attrEntry,
+.entry-item {
+  margin-top: 1.5rem;
+  position: relative;
 }
 
-#AdfsExchange {
-  background-color: #28B1E6;
-  background-image: url("../images/activedirectory.png");
-  background-repeat: no-repeat;
-  background-size: 50px;
-  margin: 10px 0;
-  padding-left: 55px;
+.attrEntry input,
+.attrEntry select,
+.entry-item input {
+  background-clip: padding-box;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  color: #495057;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 .5rem 0;
+  padding: .3rem 0 .55rem 0;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  width: 100%!important;
 }
 
-#AdfsExchange:hover {
-  background-color: #189DCF;
+.attrEntry input:focus,
+.attrEntry select:focus,
+.entry-item input:focus {
+  background: 0 0;
+  background-color: #fff;
+  border-color: #6cbf84;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #495057;
+  outline: 0;
+}
+
+.attrEntry input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.attrEntry input[type=checkbox] + label {
+  display: inline-block!important;
+}
+
+.attrEntry input[type=checkbox] + label:before {
+  border: 1.5px solid #8a8a8a;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  content: "";
+  height: 17px;
+  left: 0;
+  margin-top: 2px;
+  position: absolute;
+  top: 0;
+  transition: .2s;
+  -o-transition: .2s;
+  -webkit-transition: .2s;
+  width: 17px;
+  z-index: 0;
+}
+
+.attrEntry input[type=checkbox]:checked + label:before {
+  border-color: transparent #6cbf84 #6cbf84 transparent;
+  border-style: solid;
+  border-width: 2px;
+  height: 22px;
+  left: -3px;
+  top: -4px;
+  width: 12px;
+  transform: rotate(40deg);
+  transform-origin: 100% 100%;
+  -ms-transform: rotate(40deg);
+  -ms-transform-origin: 100% 100%;
+  -webkit-transform: rotate(40deg);
+  -webkit-transform-origin: 100% 100%;
+}
+
+.attrEntry input[type=email],
+.attrEntry input[type=password],
+.attrEntry input[type=text],
+.attrEntry select,
+.entry-item input[type=email],
+.entry-item input[type=password] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  outline: 0;
+  transition: all .3s;
+  -o-transition: all .3s;
+  -webkit-transition: all .3s;
+}
+
+.attrEntry input[type=email]:focus,
+.attrEntry input[type=password]:focus,
+.attrEntry input[type=text]:focus,
+.attrEntry select:focus,
+.entry-item input[type=email]:focus,
+.entry-item input[type=password]:focus {
+  border-bottom: 1px solid #6cbf84;
+  box-shadow: 0 1px 0 0 #6cbf84;
+  -webkit-box-shadow: 0 1px 0 0 #6cbf84;
+}
+
+.attrEntry input[type=email].highlightError,
+.attrEntry input[type=password].highlightError,
+.attrEntry input[type=text].highlightError,
+.attrEntry select.highlightError,
+.entry-item input[type=email].highlightError,
+.entry-item input[type=password].highlightError {
+  border-bottom: 1px solid #f44336;
+  box-shadow: 0 1px 0 0 #f44336;
+  -webkit-box-shadow: 0 1px 0 0 #f44336;
+}
+
+.attrEntry label,
+.entry-item label {
+  color: #757575;
+  font-size: 0.8em;
+  margin-bottom: 0;
+}
+
+.attrEntry .error.itemLevel,
+.attrEntry .helpText,
+.attrEntry .tiny {
+  display: none!important;
+}
+
+.attrEntry .error.itemLevel.show {
+  display: block!important;
+}
+
+.divider {
+  display: none!important;
+}
+
+.error.itemLevel {
+  color: #f44336;
+  font-size: 0.8rem;
+}
+
+.error.itemLevel p {
+  margin-bottom: 0;
+}
+
+.error.pageLevel {
+  color: #f44336;
+}
+
+.errorText {
+  background: inherit;
+  border: inherit;
+  margin: inherit;
+  padding: inherit;
+}
+
+.errorText,
+.verificationErrorText {
+  color: #f44336;
 }
 
 #api ul {
@@ -113,485 +344,11 @@ label,
   padding-left: 0;
 }
 
-#api[data-name='IdpSelections'] ul {
-  text-align: center;
-}
+/* ALL PAGES */
 
-#api[data-name='Phonefactor'] .buttons button#cancel {
-  width: 32%;
-}
-
-#api[data-name='SelfAsserted'] > div:first-child {
-  display: none;
-}
-
-#createAccount{
-  cursor: pointer;
-  padding-left:2px;
-  transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -ms-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  -webkit-transition: 0.5s all;
-}
-
-#email_ver_input {
-  margin-bottom: 10px 0;
-}
-
-#FacebookExchange {
-  background-color: #3B5595;
-  background-image: url("../images/facebook.png");
+body {
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 50px;
-  padding-left: 55px;
-}
-
-#FacebookExchange:hover {
-    background-color: #354C86
-}
-
-#forgotPassword {
-  clear: right;
-  cursor: pointer;
-  float: right;
-  margin-top: 10px;
-  transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -ms-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  -webkit-transition: 0.5s all;
-}
-
-#GoogleExchange {
-  background-color: #C64A29;
-  background-image: url("../images/googleplus.png");
-  background-repeat: no-repeat;
-  background-size: 50px;
-  margin: 10px 0;
-  padding-left: 55px;
-}
-
-#GoogleExchange:hover {
-  background-color: #C14325;
-}
-
-#IdentifyServerExchange {
-  background-color: #28B1E6;
-  background-image: url("../images/wingtipcorp.png");
-  background-repeat: no-repeat;
-  background-size: 50px;
-  margin-top: 10px;
-  padding-left: 55px;
-}
-
-#IdentifyServerExchange:hover {
-  background-color: #189DCF;
-}
-
-#logonIdentifier,
-#password,
-#signInName {
-  background-color: #fff !important;
-  background-image: none !important;
-  border: 1px solid #ccc;
-  border-radius: 2px !important;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
-  color: #555;
-  display: block;
-  font-size: 14px;
-  height: 40px;
-  line-height: 1.42857143;
-  margin: 10px 0;
-  padding: 6px 12px;
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s !important;
-  width: 100% !important;
-  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s !important;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
-  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s !important;
-}
-
-#logo img {
-  float: left;
-  height: 50px;
-  width: 50px;
-}
-
-#MicrosoftAccountExchange {
-  background-color: #28B1E6;
-  background-image: url("../images/microsoft.png");
-  background-repeat: no-repeat;
-  background-size: 50px;
-  padding-left: 55px;
-}
-
-#MicrosoftAccountExchange:hover {
-  background-color: #189DCF;
-}
-
-#SignUpWithLogonEmailExchange {
-  background-color: #ff5c62;
-  background-image: url("../images/wingtiptoys.png");
-  background-repeat: no-repeat;
-  background-size: 50px;
-  color: #fff;
-  margin-top: 10px;
-  padding-left: 55px;
-}
-
-#SignUpWithLogonEmailExchange:hover{
-  background-image: url("../images/wingtiptoys.png") !important;
-}
-
-.accountButton {
-  border: none;
-  border-radius: 2px;
-  color: whitesmoke;
-  font-size: larger;
-  height: 45px;
-  width: 284px;
-}
-
-.accountButton:hover {
-  border: none
-}
-
-.attrEntry,
-.phoneEntry {
-  margin-bottom: 15px;
-  padding-top: 0;
-}
-
-.attrEntry input,
-.attrEntry select,
-.phoneEntry input,
-.phoneEntry select,
-#codeVerification input {
-  background-color: #fff !important;
-  background-image: none !important;
-  border: 1px solid #ccc !important;
-  border-radius: 2px !important;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
-  color: #555;
-  display: block;
-  font-size: 14px;
-  height: 40px;
-  line-height: 1.42857143;
-  padding: 6px 12px;
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s !important;
-  width: 100% !important;
-  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s !important;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
-  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s !important;
-}
-
-.attrEntry input:invalid,
-.phoneEntry input:invalid,
-#codeVerification input:invalid {
-  border-color: inherit;
-}
-
-.attrEntry.validate input:invalid,
-.phoneEntry.validate input:invalid,
-#codeVerification.validate input:invalid {
-  border-color: #a94442 !important;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
-}
-
-.attrEntry #email_intro {
-  display: none !important;
-}
-
-.attrEntry .error.itemLevel,
-.attrEntry .helpText,
-.phoneEntry .error.itemLevel,
-.phoneEntry .helpText,
-#codeVerification .error.itemLevel,
-#codeVerification .helpText {
-  display: none;
-}
-
-.attrEntry .tiny,
-.phoneEntry .tiny,
-#codeVerification .tiny {
-  display: none;
-}
-
-.buttons button {
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 400;
-  height: inherit;
-  line-height: 1.42857143;
-  margin: 0;
-  padding: 6px 12px;
-  text-align: center;
-  touch-action: manipulation;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: inherit;
-  -moz-user-select: none;
-  -ms-touch-action: manipulation;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-}
-
-.buttons{
-  margin: 20px 0;
-}
-.buttons button#cancel,
-.buttons button#email_ver_but_edit,
-.buttons button#email_ver_but_resend {
-  background-color: #fff;
-  border-color: #ccc;
-  color: #333;
-}
-
-.buttons button#cancel {
-  font-size: 18px;
-  height: 60px;
-  width: 49.9%;
-}
-
-@media(max-width:767px) {
- .buttons button#cancel{
-    height: 50px;
-    width: 48.9%;
- }
-}
-
-.buttons button:hover#cancel,
-.buttons button:hover#email_ver_but_edit,
-.buttons button:hover#email_ver_but_resend {
-  background-color: #e6e6e6;
-  background-image: none;
-  border-color: #adadad;
-  color: #333;
-}
-
-.buttons button#continue {      
-  background-color: #5cb85c;
-  border-bottom: 5px solid #449d44;
-  border-color: #4cae4c;
-  color: #fff;
-  font-size: 18px;
-  height: 60px;
-  width: 49%;  
-}
-
-@media(max-width:767px){
-  .buttons button#continue {
-    height: 50px;
-  }
-}
-
-.buttons button:hover#continue {
-  background-color: #449d44;
-  background-image: none;
-  border-color: #398439;
-  color: #fff;
-}
-
-.buttons button[disabled]#continue,
-.buttons button[disabled]:hover#continue {
-  background-color: #5cb85c;
-  background-image: none;
-  border-color: #4cae4c;
-  color: #fff;
-}
-
-.buttons button#email_ver_but_resend,
-.buttons button#email_ver_but_verify {
-  margin-top: 5px;
-}
-
-.buttons button#email_ver_but_send,
-.buttons button#email_ver_but_verify {
-  background-color: #337ab7;
-  border-color: #2e6da4;
-  color: #fff;
-}
-
-.buttons button:hover#email_ver_but_send,
-.buttons button:hover#email_ver_but_verify {
-  background-color: #286090;
-  background-image: none;
-  border-color: #204d74;
-  color: #fff;
-}
-
-.buttons button#verifyCode,
-.buttons button#verifyPhone {      
-  background-color: #5cb85c;
-  border-bottom: 5px solid #449d44;
-  border-color: #4cae4c;
-  color: #fff;
-  font-size: 18px;
-  height: 60px;
-  margin-right: 9px;
-  width: 32%;  
-}
-
-@media(max-width:767px){
-  .buttons button#verifyCode,
-  .buttons button#verifyPhone {
-    height: 50px;
-  }
-}
-
-.create p {
-  text-align: center;
-}
-
-.divider {
-  margin: 0 auto;
-  position: relative;
-  text-align: center;
-  text-shadow: 0 1px 0 #fff;
-}
-
-.divider h2 {
-  color: #ccc;
-  line-height: 20px;
-  margin: 20px 0;
-  text-align: center;
-  text-transform: lowercase;
-}
-
-.divider h2:after,
-.divider h2:before {
-  content: "";
-  height: 1px;
-  position: absolute;
-  top: 10px;
-  width: 40%;
-}
-
-.divider h2:after {
-  background: rgb(126,126,126);
-  background: linear-gradient(left, rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-  background: -moz-linear-gradient(left, rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-  background: -ms-linear-gradient(left, rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-  background: -o-linear-gradient(left, rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-  background: -webkit-linear-gradient(left, rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-  right: 0;
-}
-
-.divider h2:before {
-  background: rgb(126,126,126);
-  background: linear-gradient(right, rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-  background: -moz-linear-gradient(right, rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-  background: -ms-linear-gradient(right, rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-  background: -o-linear-gradient(right, rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-  background: -webkit-linear-gradient(right, rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-  left: 0;
-}
-
-.entry .buttons button {
-  background-color: #337ab7;
-  border-bottom: 5px solid #204d74;
-  border-radius: 2px;
-  font-size: 18px;
-  line-height: 1.3333333;
-  padding: 10px 16px;
-  color: #fff;
-  height: 60px;
-  width: 100%;
-}
-
-.entry .buttons button:hover {
-  background-color: #286090;
-  border-color: #204d74;
-  color: #fff;
-}
-
-.error.itemLevel p {
-  color: #a94442;
-}
-
-.error.itemLevel p:before {
-  content: "\e101";
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  margin-right: 3px;
-  position: relative;
-  top: 1px;
-  -webkit-font-smoothing: antialiased;
-}
-
-.highlightError {
-  border-color: #a94442 !important;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
-}
-
-.image-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.intro {
-  display: none;
-}
-
-.localAccount .divider {
-  display: none;
-}
-
-.login-logo {
-  height: 140px;
-  margin-top: -90px;
-}
-
-.options {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 10px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.panel-body{
-  padding: 15px 30px !important;
-}
-
-.panel-default {
-  border: 1px solid #ccc !important;    
-}
-
-.phonefactor_container,
-.self_asserted_container,
-.unified_container {
-  padding-top: 80px;
-}
-
-.phoneNumber .type {
-  display: inline-block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  max-width: 100%;
-}
-
-.phoneNumbers {
-  margin-top: 20px;
-}
-
-.social {
-  margin-top: 30px;
 }
 
 .verify {
@@ -719,4 +476,279 @@ label,
     -o-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
   }
+}
+
+#api h2,
+#api .intro > p {
+  color: #323339!important;
+}
+
+#simplemodal-data.verifying-modal {
+    height: 100%;
+    position: relative;
+}
+
+    #simplemodal-data.verifying-modal:before {
+        animation: spinner 1500ms infinite linear;
+        border-radius: 0.5em;
+        box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+        content: '';
+        display: inline-block;
+        font-size: 10px;
+        height: 1em;
+        margin-top: 1em;
+        position: fixed;
+        width: 1em;
+        -moz-animation: spinner 1500ms infinite linear;
+        -ms-animation: spinner 1500ms infinite linear;
+        -o-animation: spinner 1500ms infinite linear;
+        -webkit-animation: spinner 1500ms infinite linear;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+    }
+
+/* UNIFIED PAGE */
+
+#api[data-name=Unified] .buttons {
+  margin-top: 1.5rem!important;
+}
+
+#api[data-name=Unified] .create,
+#api[data-name=Unified] .localAccount {
+  border-top: 1px solid #e9ecef;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+#api[data-name=Unified] .create > p {
+  color: #9e9e9e!important;
+  display: flex!important;
+  display: -ms-flexbox!important;
+  -ms-flex-pack: end!important;
+  display: -webkit-box!important;
+  -webkit-box-pack: end!important;
+  font-size: .9rem;
+  justify-content: flex-end!important;
+  margin-bottom: 0;
+}
+
+#api[data-name=Unified] #createAccount {
+  margin-left: .25rem;
+}
+
+#api[data-name=Unified] #forgotPassword {
+  float: right;
+  font-size: .8rem;
+}
+
+#api[data-name=Unified] #GoogleAccountOAuth2Exchange,
+#api[data-name=Unified] #GoogleExchange {
+  margin-bottom: 1rem;
+}
+
+#api[data-name=Unified] #GoogleAccountOAuth2Exchange:before,
+#api[data-name=Unified] #GoogleExchange:before {
+  padding-right: 0.25rem;
+}
+
+#api[data-name=Unified] #MicrosoftPersonalAccountOpenIdConnectExchange:before,
+#api[data-name=Unified] #MicrosoftAccountExchange:before {
+  padding-right: 0.25rem;
+}
+
+#api[data-name=Unified] #next {
+  background-color: #6cbf84!important;
+  color: #fff!important;
+}
+
+/* ALL SELF-ASSERTED PAGES */
+
+.self-asserted-container .card-footer {
+  border-top: 1px solid #e9ecef;
+  padding: 1rem;
+}
+
+.self-asserted-container .card-footer .terms-of-service {
+  height: 100px;
+  overflow-y: scroll;
+  padding-right: 0.5rem;
+  width: 100%;
+}
+
+.self-asserted-container .card-footer .terms-of-service p {
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+#api[data-name=SelfAsserted] > .intro {
+  display: none!important;
+}
+
+#api[data-name=SelfAsserted] #attributeVerification > .buttons {
+  border-top: 1px solid #e9ecef;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+#api[data-name=SelfAsserted] #continue {
+  background-color: #6cbf84!important;
+  color: #fff!important;
+  margin-bottom: 1rem;
+}
+
+#api[data-name=SelfAsserted] #cancel,
+#api[data-name=SelfAsserted] #email_ver_but_resend {
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+#api[data-name=SelfAsserted] #email_ver_but_edit,
+#api[data-name=SelfAsserted] #email_ver_but_send,
+#api[data-name=SelfAsserted] #email_ver_but_verify {
+  margin-top: 0.5rem;
+}
+
+#api[data-name=SelfAsserted] #email_ver_but_verify {
+  margin-bottom: 1rem;
+}
+
+#api[data-name=SelfAsserted] #email_ver_input,
+#api[data-name=SelfAsserted] #email_ver_input_label {
+  margin-top: 2rem;
+}
+
+/* LOCAL ACCOUNT REGISTRATION PAGE */
+
+.local-account-registration-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(5) > div,
+.local-account-registration-container-1 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(7) > div,
+.local-account-registration-container-2 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(5) > div {
+  display: block;
+  margin-top: 1.5rem;
+  min-height: 1.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.local-account-registration-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(5) > div > label:nth-child(1),
+.local-account-registration-container-1 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(7) > div > label:nth-child(1),
+.local-account-registration-container-2 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(5) > div > label:nth-child(1) {
+  display: none!important;
+}
+
+.local-account-registration-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(5) > div > label:nth-child(4),
+.local-account-registration-container-1 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(7) > div > label:nth-child(4),
+.local-account-registration-container-2 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(5) > div > label:nth-child(4) {
+  color: inherit;
+  font-size: inherit;
+  margin-bottom: 0;
+  position: static;
+  transform: inherit;
+}
+
+/* SOCIAL ACCOUNT REGISTRATION PAGE */
+
+.social-account-registration-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(2) > div,
+.social-account-registration-container-1 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(5) > div,
+.social-account-registration-container-2 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(2) > div {
+  display: block;
+  margin-top: 1.5rem;
+  min-height: 1.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.social-account-registration-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(2) > div > label:nth-child(1),
+.social-account-registration-container-1 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(5) > div > label:nth-child(1),
+.social-account-registration-container-2 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(2) > div > label:nth-child(1) {
+  display: none!important;
+}
+
+.social-account-registration-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(2) > div > label:nth-child(4),
+.social-account-registration-container-1 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(5) > div > label:nth-child(4),
+.social-account-registration-container-2 #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(2) > div > label:nth-child(4) {
+  color: inherit;
+  font-size: inherit;
+  margin-bottom: 0;
+  position: static;
+  transform: inherit;
+}
+
+/* ENTERPRISE ACCOUNT REGISTRATION PAGE */
+
+.enterprise-account-registration-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(4) > div {
+  display: block;
+  margin-top: 1.5rem;
+  min-height: 1.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.enterprise-account-registration-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(4) > div > label:nth-child(1) {
+  display: none!important;
+}
+
+.enterprise-account-registration-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(4) > div > label:nth-child(4) {
+  color: inherit;
+  font-size: inherit;
+  margin-bottom: 0;
+  position: static;
+  transform: inherit;
+}
+
+/* ACCOUNT PROFILE PAGE */
+
+.account-profile-container #api[data-name=SelfAsserted] button {
+  border: 0;
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  font-size: .8rem;
+  height: inherit;
+  margin: 0;
+}
+
+.account-profile-container #api[data-name=SelfAsserted] #continue {
+  margin-bottom: 1rem;
+}
+
+/* ACCOUNT TERMS OF SERVICE PAGE */
+
+.account-terms-of-service-container .card-alert {
+  border: 1px solid #ff3547!important;
+  border-radius: .25rem;
+  -webkit-border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  color: #ff3547;
+  padding: 1rem;
+}
+
+.account-terms-of-service-container .card-alert p {
+  margin-bottom: 0;
+}
+
+.account-terms-of-service-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(1) > div {
+  display: block;
+  margin-top: 1.5rem;
+  min-height: 1.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.account-terms-of-service-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(1) > div > label:nth-child(1) {
+  display: none!important;
+}
+
+.account-terms-of-service-container #api[data-name=SelfAsserted] #attributeList > ul > li:nth-child(1) > div > label:nth-child(4) {
+  color: inherit;
+  font-size: inherit;
+  margin-bottom: 0;
+  position: static;
+  transform: inherit;
+}
+
+.default-footer {
+  font-size: 9pt;
+  color: gray;
+  text-align: center;
+  height: 100px;
 }
