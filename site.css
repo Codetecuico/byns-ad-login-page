@@ -547,13 +547,13 @@ body {
 
 #api[data-name=Unified] #GoogleAccountOAuth2Exchange:before,
 #api[data-name=Unified] #GoogleExchange:before {
-  content: url(https://bynsstorage.blob.core.windows.net/bynslogin/images/google.png);
+  content: url(https://bynsfmsstorage.blob.core.windows.net/bynslogin/images/google.png);
   padding-right: 0.25rem;
 }
 
 #api[data-name=Unified] #FacebookAccountOAuth2Exchange:before,
 #api[data-name=Unified] #FacebookExchange:before {
-  content: url(https://bynsstorage.blob.core.windows.net/bynslogin/images/fb.png);
+  content: url(https://bynsfmsstorage.blob.core.windows.net/bynslogin/images/fb.png);
   padding-right: 0.25rem;
 }
 
