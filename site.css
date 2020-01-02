@@ -1,4 +1,4 @@
-﻿html {
+html {
   height: 100%;
 }
 
@@ -79,7 +79,6 @@ button {
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: normal;
-  width: 100%!important;
   word-wrap: break-word;
 }
 
@@ -540,31 +539,37 @@ body {
   font-size: .8rem;
 }
 
-#api[data-name=Unified] #GoogleAccountOAuth2Exchange,
-#api[data-name=Unified] #GoogleExchange {
-  margin-bottom: 1rem;
-}
-
 #api[data-name=Unified] #GoogleAccountOAuth2Exchange:before,
 #api[data-name=Unified] #GoogleExchange:before {
   content: url(https://bynsfmsstorage.blob.core.windows.net/bynslogin/images/google.png);
   padding-right: 0.25rem;
+  width: 150px !important;
 }
 
 #api[data-name=Unified] #FacebookAccountOAuth2Exchange:before,
 #api[data-name=Unified] #FacebookExchange:before {
   content: url(https://bynsfmsstorage.blob.core.windows.net/bynslogin/images/fb.png);
   padding-right: 0.25rem;
+  width: 150px !important;
 }
 
 #api[data-name=Unified] #MicrosoftPersonalAccountOpenIdConnectExchange:before,
 #api[data-name=Unified] #MicrosoftAccountExchange:before {
   padding-right: 0.25rem;
 }
+.options {
+  text-align: center;
+}
+
+.options > div {
+  display: inline-block;
+  align-self: center;
+}
 
 #api[data-name=Unified] #next {
   background-color: #6cbf84!important;
   color: #fff!important;
+  width: 100%;
 }
 
 /* ALL SELF-ASSERTED PAGES */
